@@ -9,8 +9,8 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '548411878568901', // App ID
-      channelUrl : 'rawisakhnini1992.appspot.com/channel.html',
+      appId      : '675762885808171', // App ID
+      channelUrl : 'tester--tester.appspot.com/channel.html',
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
@@ -39,7 +39,7 @@
     } else 
     {
         //document.getElementById("message").innerHTML +=  "<br>Logged Out";
- window.top.location = "http://rawisakhnini1992.appspot.com/test.html";
+ window.top.location = "http://tester--tester.appspot.com/test.html";
         //UNKNOWN ERROR
     }
     }); 

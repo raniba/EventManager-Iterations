@@ -1,6 +1,7 @@
 package gaming;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -41,19 +42,11 @@ public class eventinfo extends HttpServlet {
 				//Object hosterID = request.getParameter("theEventHoster");//event creator
 				
 				Object nameO = request.getParameter("EventName");//event name
-				Object hosterID = request.getParameter("EventHoster");//event creator
-				
-				if (nameO != null && hosterID != null)
+				if (nameO != null)
 				{
-					String[] g = new String[2];
-					g[0] = nameO.toString();//saves the event name
-					g[1] = (hosterID.toString());//saves the hoster name
-					
-					HttpSession session = request.getSession();
-					session.setAttribute("eventinfo", g);
+				//response.sendRedirect("/WEB-INF/eventindex.jsp?name=" + URLEncoder.encode(nameO.toString(), "UTF-8"));
+					response.sendRedirect("eventindex?name=" + nameO.toString());
 				}
-				//response.sendRedirect("DisplayScores");
-				response.sendRedirect("Main");
-			}
+	}
 
 		}

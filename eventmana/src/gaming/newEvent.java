@@ -16,11 +16,11 @@ public class newEvent {
 	@Persistent
 	public float time;//date time
 	@Persistent
-	private boolean PrivateOrpublic;//the event is public(true),till the creator change it to private
+	public boolean PrivateOrpublic;//the event is public(true),till the creator change it to private
 	@Persistent
-	private String invitation;//the invitation card link will be saves here
+	public String invitation;//the invitation card link will be saves here
 	@Persistent
-	private String location;//the location of the event
+	public String location;//the location of the event
 	
 	
 	public newEvent()//constructor
@@ -30,8 +30,20 @@ public class newEvent {
 		this.hosterID="";
 		this.time=(float) 0.0;
 		this.PrivateOrpublic=true;//public
-		this.invitation="";
-		this.location="";
+		this.invitation="http://";
+		this.location="location";
+		
+	}
+	
+	public newEvent(String name,int tries, String hosterID, String invitation, String location) //constructor
+	{
+		this.name=name;
+		this.tries=tries;
+		this.hosterID=hosterID;
+		this.time=0;
+		this.PrivateOrpublic=true;//public
+		this.invitation=invitation;
+		this.location=location;
 		
 	}
 

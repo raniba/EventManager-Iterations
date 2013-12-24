@@ -19,7 +19,57 @@
 </head>
 <body background="back.jpg">	
 		
-			
+<%String eventName = request.getParameter("name");%>
+<%if(eventName==null) eventName="";  %>
+
+
+<%String eventHoster=DataBaseManager.getInstance().getHosterID(eventName); %>
+<%String invitation=DataBaseManager.getInstance().getInvitation(eventName);  %>
+<%float time=DataBaseManager.getInstance().getTime(eventName);  %>
+<%boolean PrivateOrpublic=DataBaseManager.getInstance().getPrivateOrpublic(eventName);  %>
+<%String eventLocation=DataBaseManager.getInstance().getLocation(eventName);  %>
+
+<form id="editEvent" action="editEvent" method="post">
+<table>
+<tr>
+	<td>Event name:</td>
+	<td>
+	<input type="text" id="eventName" name="eventName" value="<%=eventName%>">
+	<input type="hidden" id="eventNameOld" name="eventNameOld" value="<%=eventName%>">
+	</td>
+</tr>
+
+<tr>
+	<td>Event creatorID:</td>
+	<td><%=eventHoster %><input type="hidden" id="eventHoster" name="eventHoster" value="<%=eventHoster%>"></td>
+</tr>
+
+<tr>
+	<td>event Location:</td>
+	<td><input type="text" id="EventLocation" name="EventLocation" value="<%=eventLocation%>"></td>
+</tr>
+
+<tr>
+	<td>Event time:</td>
+	<td><input type="text" id="EventTime" name="EventTime" value="<%=time%>">(enter just numbers)</td>
+</tr>
+
+<tr>
+	<td>Public event:</td>
+	<td><input type="text" id="EventPublic" name="EventPublic" value="<%=PrivateOrpublic%>"></td>
+</tr>
+
+<tr>
+	<td>Event invitation URL:</td>
+	<td><input type="text" id="EventInvitation" name="EventInvitation" value="<%=invitation%>"></td>
+</tr>
+
+<tr>
+<td><input type="submit" value="save"/></td>
+</tr>
+
+</table>
+</form>
 
 
 </body>

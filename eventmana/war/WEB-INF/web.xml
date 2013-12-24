@@ -94,6 +94,15 @@
     <url-pattern>/eventindex</url-pattern>
   </servlet-mapping>
   
+	    <servlet>
+		<servlet-name>editEvent</servlet-name>
+		<servlet-class>gaming.editEvent</servlet-class>
+	</servlet>
+	  <servlet-mapping>
+    <servlet-name>editEvent</servlet-name>
+    <url-pattern>/editEvent</url-pattern>
+  </servlet-mapping>
+  
 	  <servlet>
 		<servlet-name>eventinfo</servlet-name>
 		<servlet-class>gaming.eventinfo</servlet-class>

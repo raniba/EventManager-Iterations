@@ -7,7 +7,7 @@
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '615599291832366', // App ID
-      channelUrl : 'mosheranitester.appspot.com/channel.html',
+      channelUrl : 'manager-event.appspot.com/channel.html',
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
@@ -17,7 +17,7 @@
     {
      if (response.status === 'connected') 
     {
-    	window.top.location = "http://mosheranitester.appspot.com/Main";
+    	window.top.location = "http://manager-event.appspot.com/Main";
     	
     	/*document.getElementById("status").innerHTML="";
     	fbgetUserInfo();
@@ -96,7 +96,7 @@ left:30%;
 
 
 <meta charset="windows-1255">
-<title>Insert title here</title>
+<title>EventManager</title>
 </head>
 <body background="BlueCity.jpg">
 

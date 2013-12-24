@@ -10,7 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1255">
-<title>כותרת כלשהיא</title>
+<title>EventManager</title>
 </head>
 <body>
 <%@ include file="fibTable.jsp" %>

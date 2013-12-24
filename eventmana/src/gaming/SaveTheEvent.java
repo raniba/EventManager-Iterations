@@ -57,7 +57,9 @@ public class SaveTheEvent extends HttpServlet {
 			 * */
 			HttpSession session = request.getSession();
 			session.setAttribute("userName", g.hosterID);
-			DataBaseManager.getInstance().insertNewScore(g);
+			if(!DataBaseManager.getInstance().insertNewScore(g))//if false was returned(event name exists)
+				response.sendRedirect("eventNameExists.html");//redirect to the ERROR page
+				
 		}
 		response.sendRedirect("Main");//redirect to the main page
 	}

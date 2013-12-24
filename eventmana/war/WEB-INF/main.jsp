@@ -33,7 +33,7 @@
   window.fbAsyncInit = function() {
     FB.init({
    appId      : '615599291832366', // App ID
-      channelUrl : 'mosheranitester.appspot.com/channel.html',
+      channelUrl : 'manager-event.appspot.com/channel.html',
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
@@ -85,7 +85,7 @@
 </script>
 
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>EventManager</title>
 </head>
 <body>
 	
@@ -118,9 +118,9 @@
 		</tr>
 		
 		<tr>
-			<td width=20%>
-			<!-- <div class="container" id="eventslist"></div> -->
-			
+			<td width=20% >
+			<div style="max-height:500px; overflow:auto">
+            
 				<%
 			List<newEvent> list;
 				%>
@@ -140,13 +140,14 @@
 			}
 			%> <table>
 			 <%
+			 
 			for (newEvent item : list)
 			{
+				
 				%><tr>
 				<td>
-				<form id="eventinfo" action="eventinfo" method="post"><!-- eventinfo make a session -->
+				<form id="eventinfo" action="eventinfo" method="post" target="eventFrame"><!-- eventinfo make a session -->
 				<input type="hidden" id="EventName" name="EventName" value="<%=item.name%>">
-				<input type="hidden" id="EventHoster" name="EventHoster" value="<%=item.hosterID%>">
 				<img src="event_icon.png"/></img><%=item.name%><input type="submit" value="edit"/>
 				</form>
 				</td>
@@ -154,8 +155,9 @@
 				</tr><%
 			}
 			%> </table>
+			 </div>
 			</td>
-			<td width=80%><iframe src="eventindex" name="eventFrame" id="eventFrame" width=100% height="500"></iframe></td>
+			<td width=80%><iframe src="" name="eventFrame" id="eventFrame" width=100% height="500"></iframe></td>
 		
 			
 		</tr>
