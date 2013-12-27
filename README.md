@@ -20,5 +20,7 @@ DataBaseManager.java מתעסק עם הdata -הכל מפורט שמה
 eventinfo.java
 
 functions.js
+
+
 ---------------------------------
 iter2-:  css, send messages(events by facebook), share & like 
