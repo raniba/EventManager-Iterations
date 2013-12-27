@@ -36,9 +36,7 @@
     <servlet-name>LoginJSP</servlet-name>
     <url-pattern>/Login</url-pattern>
   </servlet-mapping>
-  
-  
-  
+ 
       <servlet>
     <servlet-name>MyEvent</servlet-name>
     <jsp-file>/WEB-INF/MyEvent.jsp</jsp-file>
@@ -143,7 +141,7 @@
   
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>MainPageJSP</welcome-file>
+    <welcome-file>LoginJSP</welcome-file>
   </welcome-file-list>
 
   

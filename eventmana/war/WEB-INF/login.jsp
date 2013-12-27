@@ -17,7 +17,7 @@
     {
      if (response.status === 'connected') 
     {
-    	window.top.location = "http://manager-event.appspot.com/Main";
+    	window.top.location = "http://1.manager-event.appspot.com/Main";
     	
     	/*document.getElementById("status").innerHTML="";
     	fbgetUserInfo();
@@ -89,7 +89,7 @@ background:url(event_manager.png) no-repeat center;
 height:500px;
 width:408px;
 position: relative;
-left:30%;
+left:35%;
 }
 
 </style>
@@ -98,7 +98,7 @@ left:30%;
 <meta charset="windows-1255">
 <title>EventManager</title>
 </head>
-<body background="BlueCity.jpg">
+<body background="templatemo_body.jpg">
 
 	<div id="demo">
 		<img id="image2" style="position: absolute; top: 238px; left: 89px; cursor:pointer;"
@@ -107,7 +107,7 @@ left:30%;
 	<!--<div id="images">
 	<div
 		style="width: 510px; height: 648px; position: relative; text-align: center">
-		<img id="image1" style="position: relative;" src="event_manager.png" />
+		<img id="image1" align:"center" style="position: relative;" src="event_manager.png" />
 		<img id="image2" style="position: absolute; top: 321px; left: 73px;"
 			src="facebook_login.png" onclick="fbLogin()" />
 	</div>

@@ -30,7 +30,7 @@ public class newEvent {
 		this.hosterID="";
 		this.time=(float) 0.0;
 		this.PrivateOrpublic=true;//public
-		this.invitation="http://";
+		this.invitation="http://pearlsofprofundity.files.wordpress.com/2013/01/thumbs-up-smiley-face.jpg";
 		this.location="location";
 		
 	}

@@ -18,17 +18,8 @@ function fbLogin()
 
 function fbgetUserName() {
 	FB.api('/me', function(response) {
-
-		var str="<b>"+response.name+"</b>";
+		var str="<h4>"+response.name+"</h4>";
 		document.getElementById("profilename").innerHTML+=str;});
-	// str +="<b>Link: </b>"+response.link+"<br>";
-	// str +="<b>Username:</b> "+response.username+"<br>";
-	// var str1 ="<b>"+response.id+"</b>";
-	// document.getElementById("profileID").innerHTML=str1;});
-	// str +="<b>Email:</b> "+response.email+"<br>";
-	//str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
-	//str +="<input type='button' value='Logout' onclick='Logout();'/>";
-
 }
 function fbgetUserId() {
 	FB.api('/me', function(response) {
@@ -36,10 +27,6 @@ function fbgetUserId() {
 		var str1 ="<b>"+response.id+"</b>";
 		profileID=response.id;
 		document.getElementById("profileID").innerHTML=str1;});
-	// str +="<b>Email:</b> "+response.email+"<br>";
-	//str +="<input type='button' value='Get Photo' onclick='getPhoto();'/>";
-	//str +="<input type='button' value='Logout' onclick='Logout();'/>";
-
 }
 
 
@@ -61,6 +48,7 @@ function fbgetPhoto()
 function fbLogout()
 {
 	FB.logout(function(){document.location.reload();});
+	window.location.href = "http://1.manager-event.appspot.com/";
 }
 
 function fbGetLoginStatus() {
@@ -84,27 +72,6 @@ function fbGetLoginStatus() {
 	});
 }
 
-/*$(function() {
-	$(document).ready(function(){
-		$('#addEvent').click(function(){
-			var eventname = $( "#eventname" ).val();
-			eventArray.push(eventname);
-			$('#eventslist').append('<br>'+ eventname +'</br>');
-		});
-	});
-});
-*/
-
-/*
-function getEventName(){
-	alert(eventArray);
-	//return eventArray;
-}
-
-function addEventToArray(var eventname){
-	alert(evenName);
-	eventArray.push(evenName);
-}*/
 
 function getEventName(){
 	alert(eventArray[0]);
@@ -128,12 +95,6 @@ function getTheEvent() {
 }
 
 function newEvent() {
-	/*	alert('rawi');
-		var eventname = $( "#eventname" ).val();
-		eventArray.push(eventname);
-		$(document).ready(function(){
-			$(".eventslist").append( "<p>Test</p>" );
-		});*/
 		var eventname = document.getElementById('eventname').value;
 		//var UserID=response.id;
 		document.getElementById("eventslist").innerHTML+="<a  target='eventFrame' href='"+profileID+"/"+eventname+"/index.html'><img src='event_icon.png'/></img><b>"+eventname+"</a><br>";	
@@ -144,8 +105,6 @@ function getfbgetUserID() {
 
 		var str1=response.id;
 		
-		//session.setAttribute("userName", "your event");
-		
 		var str="<% session.setAttribute('userName', '"+str1+"'); %>";
 		document.getElementById("myID").innerHTML+=str;});
 }
@@ -154,7 +113,7 @@ function getfbgetUserID2() {
 	FB.api('/me', function(response) {
 
 		var str1=response.id;
-		var str="<form id='formDiv' action='SaveTheEvent' method='post'><input type='hidden' name='theEventHoster' value='"+str1+"'><input type='text' id='theEventName' name='theEventName'><input type='submit' value='add' onclick='newEvent()'/></form>";
+		var str="<form id='formDiv' action='SaveTheEvent' method='post'><input type='hidden' name='theEventHoster' value='"+str1+"'><input type='text' id='theEventName' name='theEventName'><input type='submit' value='add new event' onclick='newEvent()'/></form>";
 		document.getElementById("myIDD").innerHTML+=str;});
 }
 

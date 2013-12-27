@@ -45,7 +45,7 @@ public class editEvent extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
-		Object nameO = request.getParameter("eventName");//new event name
+		Object nameO = request.getParameter("eventtName");//new event name
 		Object OldNameO = request.getParameter("eventNameOld");//the old event name
 		Object hosterID = request.getParameter("eventHoster");//event creator
 		//Object time = request.getParameter("EventTime");//event time
